@@ -137,7 +137,7 @@ void hashTableDestroy(HashTable * hashTable) {
 			linkedListDestroy(bucket);
 	}
 	free(hashTable->buckets);
-	objectTypeDestroyTypeOnly(hashTable->pairType);
+	objectTypeDestroy(hashTable->pairType);
 	free(hashTable->bucketPrintProperties);
 	free(hashTable);
 }

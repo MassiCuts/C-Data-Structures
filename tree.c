@@ -23,7 +23,7 @@ static void treeTypeDestroy(ObjectType * objectType, void * value) {
 	Tree * tree = (Tree *) value; 
 	ObjectType * elementType = objectTypeGetNestedType(tree->treeObjectType, 0);
 	objectTypeDestroyValue(elementType, tree->element);
-	objectTypeDestroyTypeOnly(tree->treeObjectType);
+	objectTypeDestroy(tree->treeObjectType);
 	linkedListDestroy(tree->children);
 }
 
@@ -77,7 +77,7 @@ void treeDestroy ( Tree * tree ) {
 	}
 	ObjectType * elementType = objectTypeGetNestedType(tree->treeObjectType, 0);
 	objectTypeDestroyValue(elementType, tree->element);
-	objectTypeDestroyTypeOnly(tree->treeObjectType);
+	objectTypeDestroy(tree->treeObjectType);
 	linkedListDestroy(tree->children);
 }
 

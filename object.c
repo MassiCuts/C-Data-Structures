@@ -70,7 +70,7 @@ ObjectType * objectTypePropertiesNestedInit(ObjectTypeToStringFunction * toStrin
   	return objType;
 }
 
-void objectTypeDestroyTypeOnly(ObjectType * objectType) {
+void objectTypeDestroy(ObjectType * objectType) {
 	if (objectType->nestedTypes)
 		free(objectType->nestedTypes);
 	if (objectType->properties)

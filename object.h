@@ -17,7 +17,7 @@ typedef int ObjectTypeCompareFunction (ObjectType * objectType, void * value1, v
 
 ObjectType * objectTypeInit(ObjectTypeToStringFunction * toStringFunction, ObjectTypeCompareFunction * compareFunction, ObjectTypeDestructor * destructor);
 ObjectType * objectTypePropertiesNestedInit(ObjectTypeToStringFunction * toStringFunction, ObjectTypeCompareFunction * compareFunction, ObjectTypeDestructor * destructor, int nestedTypesSize, int numProperties, ...);
-void objectTypeDestroyTypeOnly(ObjectType * objectType);
+void objectTypeDestroy(ObjectType * objectType);
 void objectTypeDestroyValue(ObjectType * objectType, void * value);
 void objectTypePrintValue(ObjectType * objectType, void * value);
 char* objectTypeToString(ObjectType * objectType, void * value);
